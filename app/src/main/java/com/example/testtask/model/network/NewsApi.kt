@@ -7,6 +7,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Query
+import java.text.SimpleDateFormat
 
 interface NewsApi {
 
@@ -15,7 +16,7 @@ interface NewsApi {
         private const val DEFAULT_Q = "android"
         private const val DEFAULT_API_KEY = "26eddb253e7840f988aec61f2ece2907"
         private const val DEFAULT_SORT_BY = "publishedAt"
-        private const val DEFAULT_FROM = "2019-04-00"
+        private val DEFAULT_FROM = SimpleDateFormat("yyyy-MM-dd").toString()
 
         fun getInstance(okHttpClient: OkHttpClient): NewsApi {
             return Retrofit.Builder()

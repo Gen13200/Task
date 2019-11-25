@@ -16,6 +16,6 @@ class ArticlesPresenter(private  val articlesRepository: ArticlesRepository): Ba
     }
 
     fun onOpenArticle(articleEntity: ArticleEntity){
-         viewState.startWebWiev(articleEntity)
+         viewState.startWebView(articleEntity)
     }
 }

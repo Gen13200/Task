@@ -8,3 +8,4 @@ fun preparePresenterModule() = module {
         ArticlesPresenter(articlesRepository = get())
     }
 }
+

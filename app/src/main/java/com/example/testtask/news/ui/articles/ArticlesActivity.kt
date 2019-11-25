@@ -9,7 +9,7 @@ import com.arellomobile.mvp.presenter.ProvidePresenter
 import com.example.testtask.R
 import com.example.testtask.model.entity.ArticleEntity
 import com.example.testtask.news.ui.base.BaseActivity
-import com.example.testtask.news.ui.webview.WebViewViewActivity
+import com.example.testtask.news.ui.webview.WebViewActivity
 import kotlinx.android.synthetic.main.activity_articles.*
 import org.koin.android.ext.android.get
 import org.koin.android.ext.android.inject
@@ -17,8 +17,8 @@ import org.koin.core.qualifier.named
 import java.util.concurrent.Executor
 
 class ArticlesActivity : BaseActivity(), ArticlesView{
-    override fun startWebWiev(articleEntity: ArticleEntity) {
-        startActivity(Intent(this, WebViewViewActivity::class.java).putExtra("key",articleEntity.articleUrl))
+    override fun startWebView(articleEntity: ArticleEntity) {
+        startActivity(Intent(this, WebViewActivity::class.java).putExtra("key",articleEntity.articleUrl))
     }
 
     @InjectPresenter

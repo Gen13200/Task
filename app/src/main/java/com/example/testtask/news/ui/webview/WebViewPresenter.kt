@@ -1,10 +1,14 @@
 package com.example.testtask.news.ui.webview
 
-class WebViewPresenter(webViewView: WebViewView){
+import com.arellomobile.mvp.InjectViewState
+import com.example.testtask.news.ui.base.BasePresenter
 
-    private var webViewView: WebViewView = webViewView
+@InjectViewState
+class WebViewPresenter(private var url:String): BasePresenter<WebViewView>() {
 
-    fun loadWebView(url: String){
-        webViewView.onWebView(url)
+    override fun onFirstViewAttach() {
+        super.onFirstViewAttach()
+        viewState.onWebView(url)
     }
+
 }

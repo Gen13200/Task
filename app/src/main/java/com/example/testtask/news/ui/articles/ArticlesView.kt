@@ -10,5 +10,5 @@ interface  ArticlesView: BaseView{
     @StateStrategyType(SingleStateStrategy::class)
     fun setArticles(f:(page: Int, pageSize: Int) -> List<ArticleEntity>)
     @StateStrategyType(OneExecutionStateStrategy::class)
-    fun startWebWiev(articleEntity: ArticleEntity)
+    fun startWebView(articleEntity: ArticleEntity)
 }
