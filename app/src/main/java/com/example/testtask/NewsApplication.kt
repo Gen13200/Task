@@ -16,8 +16,7 @@ class NewsApplication : Application(){
                     prepareCommonModule(),
                     prepareNetworkModule(),
                     prepareRepositoryModule(),
-                    preparePresenterModule(),
-                    prepareDbModule()
+                    preparePresenterModule()
                 )
             )
         }

@@ -18,7 +18,7 @@ class WebViewActivity :  BaseActivity(),  WebViewView{
     lateinit var webViewPresenter: WebViewPresenter
 
     @ProvidePresenter
-    fun providePresenter(): WebViewPresenter = WebViewPresenter(url = intent.getStringExtra("key"))
+    fun providePresenter(): WebViewPresenter = WebViewPresenter(StringBuilder(intent.getStringExtra("key")).toString())
 
     override fun onCreate(savedInstanceState: Bundle?){
 
@@ -26,7 +26,7 @@ class WebViewActivity :  BaseActivity(),  WebViewView{
         setContentView(R.layout.activity_web)
 
         web_view.webViewClient = WebViewClient()
-        
+
         }
 
 }
